@@ -9,7 +9,6 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --main-font: 'IBM Plex mono';
   --bg-color: #000028;
   --text-color_main: #F1B2CE;
   --text-color_dark: #000028;
@@ -20,4 +19,19 @@
   --text-title-p: #FF0070;
   --color-rec: #FF0070;
   --bg-image: url(/images/cover-image-dark.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000028;
+    --text-color_main: #F1B2CE;
+    --text-color_dark: #000028;
+    --accent-color: #FF0070;
+    --accent-color-decor: #FF0070;
+    --hover-color: rgba(255, 0, 112, 0.4);
+    --header-color: #DB00FF;
+    --text-title-p: #FF0070;
+    --color-rec: #FF0070;
+    --bg-image: url(/images/cover-image-dark.png);
+  }
 }
