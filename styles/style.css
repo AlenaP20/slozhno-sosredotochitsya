@@ -2,11 +2,11 @@
 
 .page {
   background-color: var(--bg-color, #000028);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   color: var(--text-color_main, #F1B2CE);
   position: relative;
   background-image: var(--bg-image);
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -15,7 +15,8 @@
 .header {
   padding: 0 20px;
   position: relative;
-  block-size: 100%;
+  block-size: 100vh;
+  min-height: 668px;
 }
 
 @media (width < 768px) and (width >= 375px) {
@@ -46,7 +47,7 @@
   position: absolute;
   top: 21px;
   right: 48px;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 400;
@@ -67,7 +68,7 @@
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  box-shadow: 0px 0px 6px 3px var(--color-rec);
+  box-shadow: 0px 0px 4px 2px var(--color-rec);
   top: 28%;
   right: -20px;
 }
@@ -110,7 +111,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 10px;
+  gap: 13px;
 }
 
 @media (width < 1024px) {
@@ -144,11 +145,13 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end: 1px solid var(--accent-color, #FF0070);
+  border-block-end: 1px solid var(--text-title-p);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
+  outline: 1px solid var(--text-title-p);
+  outline-offset: 1px;
 }
 
 .header__title-container {
@@ -174,7 +177,7 @@
 }
 
 .header__title {
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-transform: lowercase;
   line-height: 92.7px;
@@ -197,7 +200,7 @@
 }
 
 .header__description_text {
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   font-weight: 700;
   color: var(--text-color_dark, #000028);
@@ -244,7 +247,7 @@
 }
 
 .section__title {
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   color: var(--text-title-p, #FF0070);
   line-height: 23.4px;
@@ -277,7 +280,7 @@
 }
 
 .section__item-title {
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   color: var(--text-color_dark, #000028);
 }
@@ -285,7 +288,7 @@
 .section__item-text {
   padding-block-start: 10px;
   font-size: 18px;
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   line-height: 23.4px;
 }
 
@@ -329,7 +332,7 @@
 }
 
 .section__how-item-title {
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   color: var(--text-color_dark, #000028);
   font-weight: 400;
@@ -356,7 +359,9 @@
 
 .section__pic-image {
   max-width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .section__pic_grid {
@@ -368,22 +373,22 @@
   aspect-ratio: 1/1;
 }
 
-.section__pic-image:nth-child(1) {
+.section__pic-item:nth-child(1) {
   grid-column: 1/3;
 }
 
-.section__pic-image:nth-child(2) {
+.section__pic-item:nth-child(2) {
   grid-row: 1/3;
   grid-column: 3/3;
   height: 100%;
 }
 
-.section__pic-image:nth-child(3) {
+.section__pic-item:nth-child(3) {
   grid-row: 2/4;
   height: 100%;
 }
 
-.section__pic-image:nth-child(5) {
+.section__pic-item:nth-child(5) {
   grid-column: 2/4;
 }
 
@@ -398,7 +403,8 @@
 }
 
 .footer {
-  block-size: 768px;
+  height: 100vh;
+  min-height: 668px;
   position: relative;
   text-align: center;
   display: flex;
@@ -408,18 +414,18 @@
 
 @media (width < 1024px) and (width >= 768px) {
   .footer {
-    block-size: 1024px;
+    min-height: 1024px;
   }
 }
 
 @media (width < 768px) and (width >= 375px) {
   .footer {
-    block-size: 668px;
+    min-height: 668px;
   }
 }
 
 .footer__title {
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   text-transform: lowercase;
   line-height: 95.7px;
