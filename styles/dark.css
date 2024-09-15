@@ -18,7 +18,7 @@
   --header-color: #DB00FF;
   --text-title-p: #FF0070;
   --color-rec: #FF0070;
-  --bg-image: url(/images/cover-image-dark.png);
+  --bg-image: url(../images/cover-image-dark.png);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +32,6 @@
     --header-color: #DB00FF;
     --text-title-p: #FF0070;
     --color-rec: #FF0070;
-    --bg-image: url(/images/cover-image-dark.png);
+    --bg-image: url(../images/cover-image-dark.png);
   }
 }
