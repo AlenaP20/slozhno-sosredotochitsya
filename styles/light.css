@@ -17,7 +17,7 @@
   --header-color: #FFC2E6;
   --text-title-p: #353430;
   --color-rec: #FFF1F7;
-  --bg-image: url(/images/cover-image-light.png);
+  --bg-image: url(../images/cover-image-light.png);
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,6 +30,6 @@
     --header-color: #FFC2E6;
     --text-title-p: #353430;
     --color-rec: #FFF1F7;
-    --bg-image: url(/images/cover-image-light.png);
+    --bg-image: url(../images/cover-image-light.png);
   }
 }
